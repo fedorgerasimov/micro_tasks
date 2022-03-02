@@ -17,8 +17,9 @@ export const topCars = [
 
 export const CarsComponent = (props: CarsComponentType) => {
     return (
+
         <table>
-            {props.cars.map((objectCar,index)=>{    // отрисовать и пронумеровать, сделать таблицей
+            {props.cars.map((objectCar,index)=>{
                 return(
                     <tr key={index}>
                         <th>{objectCar.manufacturer}</th>
@@ -39,5 +40,5 @@ export const CarsComponent = (props: CarsComponentType) => {
     <td>BMW</td>
     <td>'m5cs'</td>
 </tr>*/
-
+// отрисовать и пронумеровать, сделать таблицей
 
