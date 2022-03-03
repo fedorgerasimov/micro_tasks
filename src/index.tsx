@@ -6,13 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import Button from "./Button/Button";
 import AppButton from "./AppButton/AppButton";
 import AppHook from "./useState/AppHook";
+import AppFilter from "./Filter/AppFilter";
 
 ReactDOM.render(
     <>
         {/*<App/>*/}
        {/* <Button/>*/}
        {/*<AppButton/> */}    {/*универсальная кнопка*/}
-        <AppHook/>
+        {/*<AppHook/>*/}
+        <AppFilter/>
     </>,
     document.getElementById('root')
 );
