@@ -17,19 +17,18 @@ export const topCars = [
 
 export const CarsComponent = (props: CarsComponentType) => {
     return (
-        <>
+        <table>
+            <tbody>
             {props.cars.map((objectCar, index) => {
                 return (
-                    <table>
-                        <tbody>
-                        <tr key={index}>
+                    <tr key={index}>
                             <th>{index + 1} {objectCar.manufacturer}</th>
                             <td>{objectCar.model}</td>
                         </tr>
-                        </tbody>
-                    </table>
                 )
-            })}</>
+            })}
+            </tbody>
+        </table>
     )
 }
 

@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import './AppFilter.css'
-import {NewComponent} from "../Map/NewComponents";
-import {FilterComponent} from "./FilterComponent";
-import {CurrentMoneyType} from "./FilterComponent";
+
+
 
 type  FilterType = 'all' | 'Dollars' | 'Rubls'
 
@@ -32,8 +31,8 @@ function AppFilter() {
     }
     return (
     <>
-    <FilterComponent/>
-{/*            <ul>
+
+          <ul>
                 {currentMoney.map((objFromMoneyArr, index) => {
                     return (
                         <li key={index}>
@@ -48,7 +47,7 @@ function AppFilter() {
                 <button onClick={() => onClickFilterHandler('all')}>all</button>
                 <button onClick={() => onClickFilterHandler('Rubls')}>Rubls</button>
                 <button onClick={() => onClickFilterHandler('Dollars')}>Dollars</button>
-            </div>*/}
+            </div>*/
 
         </>
     )
