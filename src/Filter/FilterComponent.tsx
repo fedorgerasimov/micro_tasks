@@ -13,12 +13,12 @@ type FilterComponentProps = {
 }
 type FilterButtonType = {
     name: string,
-    buttonFunction: () => void,  // типизация функции
+    callback: () => void  // типизация функции
 }
 
 export const FilterButton = (props: FilterButtonType) => {
     const onClickHandler = () => {
-        props.buttonFunction();
+        props.callback();
     }
     return (
         <button onClick={onClickHandler}>{props.name}</button>
@@ -40,9 +40,9 @@ export const FilterComponent = (props: FilterComponentProps) => {
                 })}
             </ul>
             <div style={{marginLeft: '40px'}}>
-                <FilterButton name={'all'} buttonFunction={() => props.click_filter('all')}/>
-                <FilterButton name={'Rubls'} buttonFunction={() => props.click_filter('Rubls')}/>
-                <FilterButton name={'Dollars'} buttonFunction={() => props.click_filter('Dollars')}/>
+                <FilterButton name={'all'} callback={() => props.click_filter('all')}/>
+                <FilterButton name={'Rubls'} callback={() => props.click_filter('Rubls')}/>
+                <FilterButton name={'Dollars'} callback={() => props.click_filter('Dollars')}/>
             </div>
         </>
     )

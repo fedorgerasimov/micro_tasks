@@ -15,3 +15,5 @@ const FilterButton = (props: FilterButtonType) => {
 };
 
 export default FilterButton;
+// можно вынести функцию в отдельную компонентку как на видео у Игоря
+// потом сделаю
