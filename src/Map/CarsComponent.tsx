@@ -19,26 +19,22 @@ export const CarsComponent = (props: CarsComponentType) => {
     return (
         <table>
             <tbody>
+            <tr>
+                <th></th>
+                <th>manufacturer</th>
+                <th>model</th>
+            </tr>
             {props.cars.map((objectCar, index) => {
                 return (
                     <tr key={index}>
-                            <th>{index + 1} {objectCar.manufacturer}</th>
-                            <td>{objectCar.model}</td>
-                        </tr>
+                        <th>{index + 1} </th>
+                        <td> {objectCar.manufacturer}</td>
+                        <td>{objectCar.model}</td>
+                    </tr>
                 )
             })}
             </tbody>
         </table>
     )
 }
-
-/*<tr>
-    <th>manufacturer</th>
-    <th>model</th>
-</tr>
-<tr>
-    <td>BMW</td>
-    <td>'m5cs'</td>
-</tr>*/
-// отрисовать и пронумеровать, сделать таблицей
 

@@ -10,11 +10,11 @@ import AppFilter from "./Filter/AppFilter";
 
 ReactDOM.render(
     <>
-        {/**<App/>**/}
+        *<App/>*
        {/* <Button/>*/}
        {/*<AppButton/> */}    {/*универсальная кнопка*/}
         {/*<AppHook/>*/}
-        <AppFilter/>
+        {/*<AppFilter/>*/}
     </>,
     document.getElementById('root')
 );
