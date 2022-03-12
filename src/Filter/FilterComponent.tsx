@@ -1,35 +1,23 @@
 import React from "react";
 import {FilterType} from "./AppFilter"
+import FilterButton from "./FilterButton";
 
 type MoneyProps = {
     banknots: string,
     value: number,
     number: string
 }
-type FilterComponentProps = {
-    current_money: Array<MoneyProps>,
-    click_filter: (value: FilterType) => void
+type FilterProps = {
+    currentMoneyComponent: Array<MoneyProps>,
+    clickFilterComponent: (value: FilterType) => void
 
 }
-type FilterButtonType = {
-    name: string,
-    callback: () => void  // типизация функции
-}
 
-export const FilterButton = (props: FilterButtonType) => {
-    const onClickHandler = () => {
-        props.callback();
-    }
-    return (
-        <button onClick={onClickHandler}>{props.name}</button>
-    );
-};
-
-export const FilterComponent = (props: FilterComponentProps) => {
+export const FilterComponent = (props: FilterProps) => {
     return (
         <>
             <ul>
-                {props.current_money.map((objFromMoneyArr, index) => {
+                {props.currentMoneyComponent.map((objFromMoneyArr, index) => {
                     return (
                         <li key={index}>
                             <span>{objFromMoneyArr.banknots}</span>
@@ -40,9 +28,9 @@ export const FilterComponent = (props: FilterComponentProps) => {
                 })}
             </ul>
             <div style={{marginLeft: '40px'}}>
-                <FilterButton name={'all'} callback={() => props.click_filter('all')}/>
-                <FilterButton name={'Rubls'} callback={() => props.click_filter('Rubls')}/>
-                <FilterButton name={'Dollars'} callback={() => props.click_filter('Dollars')}/>
+                <FilterButton buttonName={'all'} callback={() => props.clickFilterComponent('all')}/>
+                <FilterButton buttonName={'Rubls'} callback={() => props.clickFilterComponent('Rubls')}/>
+                <FilterButton buttonName={'Dollars'} callback={() => props.clickFilterComponent('Dollars')}/>
             </div>
         </>
     )

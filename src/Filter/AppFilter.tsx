@@ -19,10 +19,10 @@ function AppFilter() {
 
     let currentMoney = money
     if (filter === 'Dollars') {
-        currentMoney = money.filter((filterMoney) => filterMoney.banknots === 'Dollars')
+        currentMoney = money.filter((itemOfMoney) => itemOfMoney.banknots === 'Dollars')
     }
     if (filter === 'Rubls') {
-        currentMoney = money.filter((filterMoney) => filterMoney.banknots === 'Rubls')
+        currentMoney = money.filter((itemOfMoney) => itemOfMoney.banknots === 'Rubls')
     }
 
     const onClickFilterHandler = (nameButton: FilterType) => {
@@ -30,7 +30,7 @@ function AppFilter() {
     }
     return (
         <>
-            <FilterComponent current_money={currentMoney} click_filter={onClickFilterHandler}/>
+            <FilterComponent currentMoneyComponent={currentMoney} clickFilterComponent={onClickFilterHandler}/>
         </>
     )
 }

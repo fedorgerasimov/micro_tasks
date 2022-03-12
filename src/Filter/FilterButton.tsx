@@ -1,7 +1,7 @@
 import React from 'react';
 
 type FilterButtonType = {
-    name: string,
+    buttonName: string,
     callback: () => void,
 }
 
@@ -10,10 +10,9 @@ const FilterButton = (props: FilterButtonType) => {
         props.callback();
     }
     return (
-        <button onClick={onClickHandler}>{props.name}</button>
+        <button onClick={onClickHandler}>{props.buttonName}</button>
     );
 };
 
 export default FilterButton;
-// можно вынести функцию в отдельную компонентку как на видео у Игоря
-// потом сделаю
+//  вынес функцию в отдельную компонентку как на видео у Игоря
