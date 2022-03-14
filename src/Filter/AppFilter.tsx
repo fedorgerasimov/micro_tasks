@@ -30,7 +30,9 @@ function AppFilter() {
     }
     return (
         <>
-            <FilterComponent currentMoneyComponent={currentMoney} clickFilterComponent={onClickFilterHandler}/>
+            <FilterComponent
+                currentMoneyComponent={currentMoney}
+                clickFilterComponent={onClickFilterHandler}/>
         </>
     )
 }

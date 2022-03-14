@@ -7,6 +7,7 @@ import Button from "./Button/Button";
 import AppButton from "./AppButton/AppButton";
 import AppHook from "./useState/AppHook";
 import AppFilter from "./Filter/AppFilter";
+import AppInput from "./Input/AppInput";
 
 ReactDOM.render(
     <>
@@ -14,7 +15,8 @@ ReactDOM.render(
        {/* <Button/>*/}
        {/*<AppButton/> */}    {/*универсальная кнопка*/}
         {/*<AppHook/>*/}
-        <AppFilter/>
+        {/*<AppFilter/>*/}
+        <AppInput/>
     </>,
     document.getElementById('root')
 );
