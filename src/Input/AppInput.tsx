@@ -10,13 +10,18 @@ function AppInput() {
         {message: 'message3'}
     ])
 
+    const addMessage = (title: string) => {
+       let newMessage = {message: title};
+       setMessage([newMessage, ...message])
+    }
+
     return (
         <div className={'AppInput'}>
             {/*   <div>
                 <input/>      // вынесли в отдельную компоненту
                 <button>+</button>
             </div>*/}
-            <FullInput/>
+            <FullInput addMessage={addMessage}/>
             {message.map((el, index) => {
                 return (
                     <div key={index}>{el.message}</div>
