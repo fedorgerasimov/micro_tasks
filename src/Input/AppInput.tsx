@@ -12,20 +12,23 @@ function AppInput() {
         {message: 'message3'}
     ])
 
+    let [title, setTitle] = useState('') //добавили для того, чтобы вынести в отдельную компоненту button и input
+
     const addMessage = (title: string) => {
        let newMessage = {message: title};
        setMessage([newMessage, ...message])
     }
 
+    const callBackButtonHandler = () => {
+        addMessage(title)
+        setTitle('')   // добавили функцию для очистки input
+    }
+
     return (
         <div className={'AppInput'}>
-            {/*   <div>
-                <input/>      // вынесли в отдельную компоненту
-                <button>+</button>
-            </div>*/}
-           {/* <FullInput addMessage={addMessage}/>*/}
-            <Input/>
-            <Button ButtonName={'ButtonName'} callback={()=>{}}/>
+            {/* <FullInput addMessage={addMessage}/>*/}
+            <Input title={title} setTitle={setTitle}/>
+            <Button ButtonName={'+'} callback={callBackButtonHandler}/>
             {message.map((el, index) => {
                 return (
                     <div key={index}>{el.message}</div>
