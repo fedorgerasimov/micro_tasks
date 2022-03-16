@@ -1,11 +1,11 @@
 import React, {ChangeEvent, useState} from "react";
 
-type ValuePropsType = {
+type InputPropsType = {
     title: string
     setTitle : (title: string) => void //
 }
 
-export const Input = (props: ValuePropsType) => {
+export const Input = (props: InputPropsType) => {
 
     const onChangeButtonHandler = (event: ChangeEvent<HTMLInputElement>) =>{
         props.setTitle(event.currentTarget.value)
