@@ -22,20 +22,27 @@ type StudentType = {
     name: string,
     age: number
 }
+const liElements = students.map((el, index) =>  // всегда добавлять в li key
+    <li key={el.id}>
+        <span>{el.id}</span>
+        <span> {el.name} </span>
+        <span>{el.age}</span>
+    </li>)
 
 export const NewComponent = (props: NewComponentType) => {
 
     return (
         <div>
             <ul>
-                {props.students.map((objectFromStudentArray, index) => {
+                {liElements}
+                {/*                {props.students.map((objectFromStudentArray, index) => {
                     return (
                         <li key={objectFromStudentArray.id}>
                             <span>{objectFromStudentArray.name}</span>
                             <span> age: {objectFromStudentArray.age}</span>
                         </li>
                     )
-                })}
+                })}*/}
             </ul>
         </div>
     )

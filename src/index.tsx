@@ -11,7 +11,7 @@ import AppInput from "./Input/AppInput";
 
 ReactDOM.render(
     <>
-        {/**<App/>**/}
+        *<App/>
        {/* <Button/>*/}
        {/*<AppButton/> */}    {/*универсальная кнопка*/}
         {/*<AppHook/>*/}
