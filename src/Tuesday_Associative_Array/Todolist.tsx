@@ -1,13 +1,14 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import {FilterValuesType} from './App_Associative_Array';
 
-type TaskType = {
+export type TaskType = {
     id: string
     title: string
     isDone: boolean
 }
 
 type PropsType = {
+    todolists: string
     title: string
     tasks: Array<TaskType>
     removeTask: (taskId: string) => void
