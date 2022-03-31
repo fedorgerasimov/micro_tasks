@@ -83,6 +83,12 @@ function App_Associative_Array() {
         //setFilter(value);
     }
 
+    const removeTodolist = (todolistID: string) => {
+        console.log('remove')
+        setTodolists(todolists.filter( el => el.id !== todolistID))
+        console.log(tasks)
+        delete tasks[todolistID]
+    }
 
     const todolistComponents = todolists.map((el) => {
         let tasksForTodolist = tasks[el.id];
@@ -104,6 +110,7 @@ function App_Associative_Array() {
                 addTask={addTask}
                 changeTaskStatus={changeStatus}
                 filter={el.filter}
+                removeTodolist={removeTodolist}
             />
         )
     })
