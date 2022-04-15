@@ -9,6 +9,7 @@ import AppHook from "./useState/AppHook";
 import AppFilter from "./Filter/AppFilter";
 import AppInput from "./Input/AppInput";
 import App_Associative_Array from "./Tuesday_Associative_Array/App_Associative_Array";
+import LocalStorage from "./LocalStorage/LocalStorage";
 
 ReactDOM.render(
     <>
@@ -18,7 +19,8 @@ ReactDOM.render(
         {/*<AppHook/>*/}
         {/*<AppFilter/>*/}
         {/*<AppInput/>*/}
-        <App_Associative_Array/>
+        {/*<App_Associative_Array/>*/}
+        <LocalStorage/>
     </>,
     document.getElementById('root')
 );
