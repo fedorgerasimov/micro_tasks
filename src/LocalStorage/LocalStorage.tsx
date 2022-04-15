@@ -32,7 +32,7 @@ function LocalStorage() {
     }
 
     return (
-        <div className='local'>
+        <div className='storage'>
             <h1>{value}</h1>
             <button onClick={onClickHandler}>inc</button>
             <button onClick={setToLocalStorageHandler}>setToLocalStorage</button>
